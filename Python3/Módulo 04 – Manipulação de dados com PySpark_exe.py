@@ -26,7 +26,8 @@ schema = StructType([
       StructField("País",StringType()),
       StructField("salario",DoubleType())
   ])
-path = (r"C:\Users\izabe\Documents\GitHub\SoulON\Python3\adult_data.csv")
+
+path = ("C:/Users/izabe/Documents/GitHub/SoulON/Python3/adult_data.csv")
 
 df = spark.read.format('csv')\
     .schema(schema)\
@@ -57,5 +58,6 @@ df3.show()
 
 df.describe('salario').show()
 
+spark.stop()
 
 
